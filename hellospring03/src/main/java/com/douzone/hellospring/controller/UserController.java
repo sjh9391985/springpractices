@@ -14,7 +14,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
  */
 
 @Controller
-@RequestMapping("/user")
+@RequestMapping("/use"
+		+ "r")
 public class UserController {
 	
 	//오버로딩 join

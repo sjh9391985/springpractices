@@ -9,8 +9,32 @@
 	</parent>
 	<artifactId>hellospring03</artifactId>
 	<packaging>war</packaging>
-
+	
+	<properties>
+    	 <org.springframework-version>4.3.4.RELEASE</org.springframework-version>
+	</properties>
+	
 	<dependencies>
+		<!-- spring context(Container) -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${org.springframework-version}</version>
+		</dependency>
+		
+		<!-- spring web MVC -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>${org.springframework-version}</version>
+		</dependency>
+		
+		<!-- spring web(dispatcherServlet, contextLoadListenr, encoding) -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>${org.springframework-version}</version>
+		</dependency>
 	
 	</dependencies>
 

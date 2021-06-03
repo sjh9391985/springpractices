@@ -13,8 +13,7 @@ public class EmaillistVo {
 
 	public void setNo(long no) {
 		this.no = no;
-		
-	
+
 	}
 
 	public String getFirstName() {

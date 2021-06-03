@@ -7,14 +7,13 @@
 		<artifactId>spring-practices</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>emaillist03</artifactId>
+	<artifactId>guestbook03</artifactId>
 	<packaging>war</packaging>
-
-
+	
 	<properties>
 		<org.springframework-version>4.3.4.RELEASE</org.springframework-version>
 	</properties>
-
+	
 	<!-- 자신이 쓰는 라이브러리는 왜 사용하는지 잘 알고 있어야 한다! -->
 	<dependencies>
 		<!-- spring context(Container) -->
@@ -67,9 +66,9 @@
 			<scope>provided</scope>
 		</dependency>
 	</dependencies>
-
+	
 	<build>
-		<finalName>emaillist03</finalName>
+		<finalName>guestbook03</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -85,12 +84,12 @@
 				<artifactId>tomcat-maven-plugin</artifactId>
 				<configuration>
 					<url>http://192.168.80.114:8080/manager/text</url>
-					<path>/emaillist03</path>
+					<path>/guestbook03</path>
 					<username>admin</username>
 					<password>manager</password>
 				</configuration>
 			</plugin>
 		</plugins>
 	</build>
-
+	
 </project>

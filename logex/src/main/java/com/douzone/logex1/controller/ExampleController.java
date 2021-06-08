@@ -10,9 +10,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class ExampleController {
 	
 	/**
-	 *  Logger 생성
+	 *  Logger 생성 => 로그를 남기는 방식
 	 */
-	private static final Log LOG = LogFactory.getLog( ExampleController.class );
+	private static final Log LOGGER = LogFactory.getLog( ExampleController.class ); 
 	
 	@RequestMapping( "/ex1" )
 	@ResponseBody
@@ -32,10 +32,10 @@ public class ExampleController {
 		 *     직접 테스트 해 보세요.
 		 *  
 		 */
-		LOG.debug( "#ex1 - debug log" );
-		LOG.info( "#ex1 - info log" );
-		LOG.warn( "#ex1 - warn log" );
-		LOG.error( "#ex1 - error log" );
+		LOGGER.debug( "#ex1 - debug log" );
+		LOGGER.info( "#ex1 - info log" ); //info로 남길경우에는 info 아래의 정보들만 해당하여 콘솔에 출력
+		LOGGER.warn( "#ex1 - warn log" );
+		LOGGER.error( "#ex1 - error log" );
 		
 		return "Logback Logging Example1";
 	}

@@ -33,12 +33,6 @@ public class GuestbookController {
 	return "/WEB-INF/views/index.jsp";
 	}
 	
-	@RequestMapping(value="/delete/{no}", method=RequestMethod.GET)
-	public String deleteForm(@PathVariable("no") long no , Model model) {
-		model.addAttribute("no",no);
-		
-		return "/WEB-INF/views/deleteform.jsp";
-	}
 	
 	@RequestMapping(value="/add", method=RequestMethod.POST)
 	public String add(GuestBookVo vo) {
@@ -46,6 +40,14 @@ public class GuestbookController {
 		
 		return "redirect:/";
 	}
+	
+	@RequestMapping(value="/delete/{no}", method=RequestMethod.GET)
+	public String deleteForm(@PathVariable("no") long no , Model model) {
+		model.addAttribute("no",no);
+		
+		return "/WEB-INF/views/deleteform.jsp";
+	}
+	
 	@RequestMapping(value="/delete/{no}", method=RequestMethod.POST)	
 	public String delete(GuestBookVo vo, @PathVariable("no") long no, String password) {
 		
